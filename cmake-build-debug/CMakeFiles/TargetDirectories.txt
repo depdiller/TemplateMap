@@ -1,0 +1,3 @@
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/CMakeFiles/mapTemplate.dir
