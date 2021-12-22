@@ -6,13 +6,28 @@
 			[
 				{
 					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.21"
 					},
 					"projectIndex" : 0,
-					"source" : ".",
+					"source" : "."
+				},
+				{
+					"build" : "BinarySearchTree",
+					"jsonFile" : "directory-BinarySearchTree-Debug-53a2bbbd13f4391cd146.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "BinarySearchTree",
 					"targetIndexes" : 
 					[
 						0
@@ -25,7 +40,8 @@
 				{
 					"directoryIndexes" : 
 					[
-						0
+						0,
+						1
 					],
 					"name" : "mapTemplate",
 					"targetIndexes" : 
@@ -37,9 +53,9 @@
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 0,
-					"id" : "mapTemplate::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mapTemplate-Debug-2661add5f65f28db0284.json",
+					"directoryIndex" : 1,
+					"id" : "mapTemplate::@0e62f2c9454cd0be8998",
+					"jsonFile" : "target-mapTemplate-Debug-a2ce43f38796139bc424.json",
 					"name" : "mapTemplate",
 					"projectIndex" : 0
 				}

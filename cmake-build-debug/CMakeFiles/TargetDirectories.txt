@@ -1,3 +1,5 @@
 /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/CMakeFiles/mapTemplate.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/CMakeFiles/rebuild_cache.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/CMakeFiles/edit_cache.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/CMakeFiles/mapTemplate.dir
