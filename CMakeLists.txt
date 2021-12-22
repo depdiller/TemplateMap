@@ -4,3 +4,4 @@ project(mapTemplate)
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(BinarySearchTree)
+add_subdirectory(dialog_test)

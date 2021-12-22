@@ -3,3 +3,6 @@
 /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/CMakeFiles/rebuild_cache.dir
 /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/CMakeFiles/edit_cache.dir
 /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/CMakeFiles/mapTemplate.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/dialog_test/CMakeFiles/rebuild_cache.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/dialog_test/CMakeFiles/edit_cache.dir
+/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/dialog_test/CMakeFiles/dialog.dir

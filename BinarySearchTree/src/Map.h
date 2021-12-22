@@ -99,6 +99,8 @@ namespace TemplateMap {
 
     template<typename Key, typename Value>
     MapIteretor<Key, Value> Map<Key, Value>::insert(Key key, Value value) {
+        if (tree.search(key) != end())
+            ++sizeOfTree;
         return iterator(tree.insert(key, value));
     }
 
@@ -128,9 +130,6 @@ namespace TemplateMap {
         }
         return tmp1.currentNode->getValue();
     }
-
-
 }
-
 
 #endif //MAPTEMPLATE_MAP_H

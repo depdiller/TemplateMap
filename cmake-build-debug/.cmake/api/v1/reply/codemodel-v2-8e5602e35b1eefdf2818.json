@@ -1,0 +1,101 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "BinarySearchTree",
+					"jsonFile" : "directory-BinarySearchTree-Debug-53a2bbbd13f4391cd146.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "BinarySearchTree",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "dialog_test",
+					"jsonFile" : "directory-dialog_test-Debug-ac154727a66e2344be30.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dialog_test",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "mapTemplate",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "dialog::@bd38de51ff3809466e63",
+					"jsonFile" : "target-dialog-Debug-359e639e8ae1e40f8a94.json",
+					"name" : "dialog",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "mapTemplate::@0e62f2c9454cd0be8998",
+					"jsonFile" : "target-mapTemplate-Debug-acac49f0c70311c7bc12.json",
+					"name" : "mapTemplate",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug",
+		"source" : "/Users/stanislavvoronov/CLionProjects/mapTemplate"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
