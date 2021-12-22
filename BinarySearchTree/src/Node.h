@@ -26,6 +26,7 @@ namespace TemplateMap {
         Node<Key, Value> *search(Node<Key, Value> *ptrNode, Key key);
         Node<Key, Value> *min(Node<Key, Value> *ptrNode);
         Node<Key, Value> *max(Node<Key, Value> *ptrNode);
+        Node<Key, Value> *next(Node<Key, Value> *ptrNode);
         void deleteNode(Node<Key, Value> *ptrNode);
     };
 
@@ -92,6 +93,18 @@ namespace TemplateMap {
             deleteNode(ptrNode->right);
             delete ptrNode;
         }
+    }
+
+    template<typename Key, typename Value>
+    Node<Key, Value> *Node<Key, Value>::next(Node<Key, Value> *ptrNode) {
+        if (ptrNode->right != nullptr)
+            return min(ptrNode->right);
+        Node<Key, Value>* tmp = ptrNode->parent;
+        while (tmp != nullptr && ptrNode == tmp->right) {
+            ptrNode = tmp;
+            tmp = tmp->parent;
+        }
+        return tmp;
     }
 }
 
