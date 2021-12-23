@@ -46,7 +46,7 @@ namespace TemplateMap {
 
     template<typename Key, typename Value>
     Node<Key, Value> *BinarySearchTree<Key, Value>::insert(Key key, Value value) {
-        root = root->insert(root, root, key, value);
+        root = root->insert(root, key, value);
         return root->search(root, key);
     }
 

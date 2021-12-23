@@ -22,7 +22,7 @@ namespace TemplateMap {
         Node<Key, Value> *getLeft() const { return this->left; }
         Node<Key, Value> *getRight() const { return this->right; }
         // methods for tree
-        Node<Key, Value> *insert(Node<Key, Value> *head, Node<Key, Value> *ptrNode, Key key, Value value);
+        Node<Key, Value> *insert(Node<Key, Value> *head, Key key, Value value);
         Node<Key, Value> *search(Node<Key, Value> *ptrNode, Key key);
         Node<Key, Value> *min(Node<Key, Value> *ptrNode);
         Node<Key, Value> *max(Node<Key, Value> *ptrNode);
@@ -31,33 +31,29 @@ namespace TemplateMap {
     };
 
     template<typename Key, typename Value>
-    Node<Key, Value> *Node<Key, Value>::insert(Node<Key, Value> *head, Node<Key, Value> *ptrNode, Key key, Value value) {
-        // ptrNode == head at the beginning
-        if (ptrNode == nullptr)
-            return new Node(key, value, head);
-        else {
-            if (ptrNode->key < key)
-                ptrNode->right = insert(ptrNode, ptrNode->left, key, value);
-            else if (ptrNode->key > key)
-                ptrNode->left = insert(ptrNode, ptrNode->right, key, value);
-            // с этого момента не уверен
-            else if (ptrNode->key == key) {
-
-//                if (ptrNode->parent == nullptr) {
-//                    delete ptrNode;
-//                    head = new Node(key, value, nullptr);
-//                }
-//                else if (head->left->key == ptrNode->key) {
-//                    delete ptrNode;
-//                    head->left = new Node(key, value, head);
-//                }
-//                else if (head->right->key == ptrNode->key) {
-//                    delete ptrNode;
-//                    head->right = new Node(key, value, head);
-//                }
+    Node<Key, Value> *Node<Key, Value>::insert(Node<Key, Value> *head, Key key, Value value) {
+        Node<Key, Value> *newEl, *move_thru = head, *future_parent = nullptr;
+        Node<Key, Value> *tmp = head->search(head, key);
+        if (tmp == nullptr) {
+            newEl = new Node(key, value, nullptr);
+            while (move_thru != nullptr) {
+                future_parent = move_thru;
+                if (newEl->key < move_thru->key)
+                    move_thru = move_thru->left;
+                else
+                    move_thru = move_thru->right;
             }
-            return head;
+            newEl->parent = future_parent;
+            if (future_parent == nullptr)
+                head = newEl;
+            else if (newEl->key < future_parent->key)
+                future_parent->left = newEl;
+            else
+                future_parent->right = newEl;
         }
+        else
+            tmp->value = value;
+        return head;
     }
 
     template<typename Key, typename Value>
