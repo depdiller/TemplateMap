@@ -121,13 +121,6 @@ build CMakeFiles/mapTest.dir/googleTestMap.cpp.o: CXX_COMPILER__mapTest_Debug /U
   OBJECT_DIR = CMakeFiles/mapTest.dir
   OBJECT_FILE_DIR = CMakeFiles/mapTest.dir
 
-build CMakeFiles/mapTest.dir/Users/stanislavvoronov/CLionProjects/mapTemplate/dialog_test/main.cpp.o: CXX_COMPILER__mapTest_Debug /Users/stanislavvoronov/CLionProjects/mapTemplate/dialog_test/main.cpp || cmake_object_order_depends_target_mapTest
-  DEP_FILE = CMakeFiles/mapTest.dir/Users/stanislavvoronov/CLionProjects/mapTemplate/dialog_test/main.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/stanislavvoronov/CLionProjects/mapTemplate/google_test/../BinarySearchTree/src -isystem /Users/stanislavvoronov/CLionProjects/mapTemplate/google_test/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/stanislavvoronov/CLionProjects/mapTemplate/google_test/cmake-build-debug/_deps/googletest-src/googletest
-  OBJECT_DIR = CMakeFiles/mapTest.dir
-  OBJECT_FILE_DIR = CMakeFiles/mapTest.dir/Users/stanislavvoronov/CLionProjects/mapTemplate/dialog_test
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target mapTest
@@ -136,7 +129,7 @@ build CMakeFiles/mapTest.dir/Users/stanislavvoronov/CLionProjects/mapTemplate/di
 #############################################
 # Link the executable mapTest
 
-build mapTest: CXX_EXECUTABLE_LINKER__mapTest_Debug CMakeFiles/mapTest.dir/googleTestMap.cpp.o CMakeFiles/mapTest.dir/Users/stanislavvoronov/CLionProjects/mapTemplate/dialog_test/main.cpp.o | lib/libgtest_maind.a /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/libmapTemplate.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+build mapTest: CXX_EXECUTABLE_LINKER__mapTest_Debug CMakeFiles/mapTest.dir/googleTestMap.cpp.o | lib/libgtest_maind.a /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/libmapTemplate.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
   LINK_LIBRARIES = lib/libgtest_maind.a  /Users/stanislavvoronov/CLionProjects/mapTemplate/cmake-build-debug/BinarySearchTree/libmapTemplate.a  lib/libgtestd.a
   OBJECT_DIR = CMakeFiles/mapTest.dir

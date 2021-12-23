@@ -17,7 +17,7 @@ namespace TemplateMap {
         Node(Key key, Value value, Node *parent);
         // getters
         Key getKey() const { return this->key; }
-        Value getValue() const { return this->value; }
+        const Value &getValue() const { return this->value; }
         Node<Key, Value> *getParent() const { return this->parent; }
         Node<Key, Value> *getLeft() const { return this->left; }
         Node<Key, Value> *getRight() const { return this->right; }

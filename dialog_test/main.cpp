@@ -37,7 +37,7 @@ int main() {
                 std::string searchKey;
                 std::cout << "Enter key for search: ";
                 std::cin >> searchKey;
-                TemplateMap::MapIteretor<std::string, int> it1 = testMap.search(searchKey);
+                TemplateMap::MapIterator<std::string, int> it1 = testMap.search(searchKey);
                 if (it1 == nullptr)
                     std::cout << "No such key." << std::endl;
                 else
@@ -45,7 +45,7 @@ int main() {
             }
                 break;
             case 3: {
-                TemplateMap::MapIteretor<std::string, int> it2 = testMap.begin();
+                TemplateMap::MapIterator<std::string, int> it2 = testMap.begin();
                 for (; it2 != testMap.end(); ++it2) {
                     std::cout << it2->getKey() << '-' << it2->getValue() << std::endl;
                 }
