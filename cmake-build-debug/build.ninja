@@ -106,18 +106,6 @@ build BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o: CX
   OBJECT_DIR = BinarySearchTree/CMakeFiles/mapTemplate.dir
   OBJECT_FILE_DIR = BinarySearchTree/CMakeFiles/mapTemplate.dir/src
 
-build BinarySearchTree/CMakeFiles/mapTemplate.dir/src/Map.cpp.o: CXX_COMPILER__mapTemplate_Debug /Users/stanislavvoronov/CLionProjects/mapTemplate/BinarySearchTree/src/Map.cpp || cmake_object_order_depends_target_mapTemplate
-  DEP_FILE = BinarySearchTree/CMakeFiles/mapTemplate.dir/src/Map.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++2a
-  OBJECT_DIR = BinarySearchTree/CMakeFiles/mapTemplate.dir
-  OBJECT_FILE_DIR = BinarySearchTree/CMakeFiles/mapTemplate.dir/src
-
-build BinarySearchTree/CMakeFiles/mapTemplate.dir/__/google_test/googleTest.cpp.o: CXX_COMPILER__mapTemplate_Debug /Users/stanislavvoronov/CLionProjects/mapTemplate/google_test/googleTest.cpp || cmake_object_order_depends_target_mapTemplate
-  DEP_FILE = BinarySearchTree/CMakeFiles/mapTemplate.dir/__/google_test/googleTest.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++2a
-  OBJECT_DIR = BinarySearchTree/CMakeFiles/mapTemplate.dir
-  OBJECT_FILE_DIR = BinarySearchTree/CMakeFiles/mapTemplate.dir/__/google_test
-
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target mapTemplate
@@ -126,7 +114,7 @@ build BinarySearchTree/CMakeFiles/mapTemplate.dir/__/google_test/googleTest.cpp.
 #############################################
 # Link the static library BinarySearchTree/libmapTemplate.a
 
-build BinarySearchTree/libmapTemplate.a: CXX_STATIC_LIBRARY_LINKER__mapTemplate_Debug BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o BinarySearchTree/CMakeFiles/mapTemplate.dir/src/Map.cpp.o BinarySearchTree/CMakeFiles/mapTemplate.dir/__/google_test/googleTest.cpp.o
+build BinarySearchTree/libmapTemplate.a: CXX_STATIC_LIBRARY_LINKER__mapTemplate_Debug BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o
   ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = BinarySearchTree/CMakeFiles/mapTemplate.dir

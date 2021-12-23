@@ -1,5 +1,11 @@
 # ninja log v5
-1	26	1640194653397251776	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/Node.cpp.o	aca71dc9feb33921
-21	677	1640208306501765000	BinarySearchTree/libmapTemplate.a	685be283ba152f0d
-0	21	1640208305845214540	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
-0	21	1640208305845304639	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/Map.cpp.o	39bef33827723328
+0	23	1640218264373105823	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
+23	37	1640218264387700000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
+0	250	1640218280019815763	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
+251	280	1640218280050453276	dialog_test/dialog	fef79b7647c09dce
+1	248	1640218469815268442	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
+248	278	1640218469846953942	dialog_test/dialog	fef79b7647c09dce
+1	24	1640218756426357233	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
+24	40	1640218756443255000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
+1	257	1640218756658547466	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
+257	288	1640218756690501962	dialog_test/dialog	fef79b7647c09dce

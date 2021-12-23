@@ -19,9 +19,15 @@ namespace TemplateMap {
         Node<Key, Value> *search(Key key);
         Node<Key, Value> *min();
         Node<Key, Value> *max();
+//        Node<Key, Value> *next(const Key &);
         Value &getValueByKey(Key key) const;
         Node<Key, Value> *getRoot() const { return root; }
     };
+//    template<typename Key, typename Value>
+//    Node<Key, Value> *BinarySearchTree<Key, Value>::next(const Key &key) {
+//        Node<Key, Value> *tmp = search(key);
+//        return tmp->next(tmp);
+//    }
 
     template<typename Key, typename Value>
     Node<Key, Value> *BinarySearchTree<Key, Value>::min() {
@@ -40,8 +46,8 @@ namespace TemplateMap {
 
     template<typename Key, typename Value>
     Node<Key, Value> *BinarySearchTree<Key, Value>::insert(Key key, Value value) {
-        root->insert(root, root, key, value);
-        return root->search(key);
+        root = root->insert(root, root, key, value);
+        return root->search(root, key);
     }
 
     template<typename Key, typename Value>

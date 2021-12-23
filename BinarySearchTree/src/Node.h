@@ -37,15 +37,24 @@ namespace TemplateMap {
             return new Node(key, value, head);
         else {
             if (ptrNode->key < key)
-                ptrNode->left = insert(ptrNode, ptrNode->left, key, value);
+                ptrNode->right = insert(ptrNode, ptrNode->left, key, value);
             else if (ptrNode->key > key)
-                ptrNode->right = insert(ptrNode, ptrNode->right, key, value);
+                ptrNode->left = insert(ptrNode, ptrNode->right, key, value);
             // с этого момента не уверен
             else if (ptrNode->key == key) {
-                if (head->left->key == ptrNode->key) {
-                    delete ptrNode;
-                    head->left = new Node(key, value, head);
-                }
+
+//                if (ptrNode->parent == nullptr) {
+//                    delete ptrNode;
+//                    head = new Node(key, value, nullptr);
+//                }
+//                else if (head->left->key == ptrNode->key) {
+//                    delete ptrNode;
+//                    head->left = new Node(key, value, head);
+//                }
+//                else if (head->right->key == ptrNode->key) {
+//                    delete ptrNode;
+//                    head->right = new Node(key, value, head);
+//                }
             }
             return head;
         }

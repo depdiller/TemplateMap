@@ -11,8 +11,8 @@ namespace TemplateMap {
         Node<Key, Value> *currentNode;
     public:
         MapIteretor(Node<Key, Value> *ptrNode);
-        bool operator!=(const MapIteretor<Key, Value> &it);
-        bool operator==(const MapIteretor<Key, Value> &it);
+        bool operator!=(const MapIteretor<Key, Value> &it) const;
+        bool operator==(const MapIteretor<Key, Value> &it) const;
         Node<Key, Value> &operator*();
         Node<Key, Value> *operator->();
         MapIteretor<Key, Value> &operator++();
@@ -27,12 +27,14 @@ namespace TemplateMap {
     public:
         friend class MapIteretor<Key, Value>;
         typedef MapIteretor<Key, Value> iterator;
-        typedef MapIteretor<const Key, const Value> const_iterator;
+//        typedef MapIteretor<const Key, const Value> const_iterator;
+        Map() : sizeOfTree(0) {};
+
 
         iterator begin();
         iterator end();
 
-        int size() const { return size; }
+        int size() const { return sizeOfTree; }
         bool isEmpty() const;
         iterator insert(Key key, Value value);
         iterator search(Key key);
@@ -48,12 +50,12 @@ namespace TemplateMap {
     }
 
     template<typename Key, typename Value>
-    bool MapIteretor<Key, Value>::operator!=(const MapIteretor<Key, Value> &it) {
+    bool MapIteretor<Key, Value>::operator!=(const MapIteretor<Key, Value> &it) const {
         return currentNode != it.currentNode;
     }
 
     template<typename Key, typename Value>
-    bool MapIteretor<Key, Value>::operator==(const MapIteretor<Key, Value> &it) {
+    bool MapIteretor<Key, Value>::operator==(const MapIteretor<Key, Value> &it) const {
         return currentNode == it.currentNode;
     }
 
@@ -80,11 +82,10 @@ namespace TemplateMap {
         return res;
     }
 
-
     // Map
     template<typename Key, typename Value>
     MapIteretor<Key, Value> Map<Key, Value>::begin() {
-        return iterator(tree.getRoot());
+        return iterator(tree.min());
     }
 
     template<typename Key, typename Value>
@@ -99,7 +100,7 @@ namespace TemplateMap {
 
     template<typename Key, typename Value>
     MapIteretor<Key, Value> Map<Key, Value>::insert(Key key, Value value) {
-        if (tree.search(key) != end())
+        if (tree.search(key) == end())
             ++sizeOfTree;
         return iterator(tree.insert(key, value));
     }

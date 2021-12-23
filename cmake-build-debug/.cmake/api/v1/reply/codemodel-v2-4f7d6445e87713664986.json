@@ -73,14 +73,14 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "dialog::@bd38de51ff3809466e63",
-					"jsonFile" : "target-dialog-Debug-359e639e8ae1e40f8a94.json",
+					"jsonFile" : "target-dialog-Debug-716f3922755b5ca68942.json",
 					"name" : "dialog",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "mapTemplate::@0e62f2c9454cd0be8998",
-					"jsonFile" : "target-mapTemplate-Debug-acac49f0c70311c7bc12.json",
+					"jsonFile" : "target-mapTemplate-Debug-454ba540a015f7cb0750.json",
 					"name" : "mapTemplate",
 					"projectIndex" : 0
 				}
