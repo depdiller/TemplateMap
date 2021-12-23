@@ -31,6 +31,11 @@ TEST(MapIterator, IteratingThru) {
     for (it = map.begin(); it != map.end(); ++it, ++i) {
         ASSERT_EQ(it->getValue(), i);
     }
+    i = 1;
+    for (const auto& element : map) {
+        ASSERT_EQ(element.getValue(), i);
+        ++i;
+    }
 }
 
 TEST(MapOperators, AllOperators) {

@@ -1,4 +1,3 @@
-
 #ifndef MAPTEMPLATE_NODE_H
 #define MAPTEMPLATE_NODE_H
 
