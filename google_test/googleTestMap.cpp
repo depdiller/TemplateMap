@@ -44,6 +44,11 @@ TEST(MapOperators, AllOperators) {
     std::string s_except("abcde");
     ASSERT_EQ(map[s], 4);
     EXPECT_ANY_THROW(map[s_except]);
+
+    const std::string s_const("abcd");
+    ASSERT_EQ(map[s], 4);
+    const std::string s_const2("non_exist");
+    EXPECT_ANY_THROW(map[s_const2]);
 }
 
 TEST(Iterator, IteratorOperands) {
