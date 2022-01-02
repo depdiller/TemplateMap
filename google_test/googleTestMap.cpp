@@ -32,6 +32,7 @@ TEST(MapIterator, IteratingThru) {
         ASSERT_EQ(it->getValue(), i);
     }
     i = 1;
+    // using iterator implicitly
     for (const auto& element : map) {
         ASSERT_EQ(element.getValue(), i);
         ++i;
@@ -54,6 +55,21 @@ TEST(MapOperators, AllOperators) {
     ASSERT_EQ(map[s], 4);
     const std::string s_const2("non_exist");
     EXPECT_ANY_THROW(map[s_const2]);
+
+    map["abcde"] = 8;
+    ASSERT_EQ(map["abcde"], 8);
+
+    TemplateMap::Map<std::string, int> map1;
+    map1["a"] = 1;
+    map1["ab"] = 2;
+    std::string str1("abc");
+    map1[str1] = 3;
+    const std::string str2("abcd");
+    map1[str2] = 4;
+    ASSERT_EQ(map1["a"], 1);
+    ASSERT_EQ(map1["ab"], 2);
+    ASSERT_EQ(map1["abc"], 3);
+    ASSERT_EQ(map1[str2], 4);
 }
 
 TEST(Iterator, IteratorOperands) {

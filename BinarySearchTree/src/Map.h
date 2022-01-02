@@ -29,7 +29,6 @@ namespace TemplateMap {
     public:
         friend class MapIterator<Key, Value>;
         typedef MapIterator<Key, Value> iterator;
-//        typedef MapIterator<const Key, const Value> const_iterator;
         Map() : sizeOfTree(0) {};
 
 
@@ -41,8 +40,10 @@ namespace TemplateMap {
         iterator insert(Key key, Value value);
         iterator search(Key key);
 
-        const Value &operator[](const Key &key) const;
-        const Value &operator[](Key &&key);
+        Value &operator[](const Key &key);
+        Value &operator[](Key &&key);
+        Map<Key, Value> &operator=(const Map &other);
+        Map<Key, Value> &operator=(Map &&other) noexcept;
     };
 
     // MapIterator
@@ -113,10 +114,10 @@ namespace TemplateMap {
     }
 
     template<typename Key, typename Value>
-    const Value &Map<Key, Value>::operator[](const Key &key) const {
+    Value &Map<Key, Value>::operator[](const Key &key) {
         Map<Key, Value>::iterator tmp1 = tree.search(key);
         if (tmp1 != end()) {
-            return tmp1.getCurrentNode()->getValue();
+            return const_cast<Value &>(tmp1.getCurrentNode()->getValue());
         }
         else {
             throw std::invalid_argument("No such key.");
@@ -124,14 +125,31 @@ namespace TemplateMap {
     }
 
     template<typename Key, typename Value>
-    const Value &Map<Key, Value>::operator[](Key &&key) {
+    Value &Map<Key, Value>::operator[](Key &&key) {
         Map<Key, Value>::iterator tmp1 = tree.search(key);
         if (tmp1 == end()) {
             Value v;
             Map<Key, Value>::iterator tmp2 = insert(key, v);
-            return tmp2.getCurrentNode()->getValue();
+            return const_cast<Value &>(tmp1.getCurrentNode()->getValue());
         }
-        return tmp1.getCurrentNode()->getValue();
+        return const_cast<Value &>(tmp1.getCurrentNode()->getValue());
+    }
+
+    template<typename Key, typename Value>
+    Map<Key, Value> &Map<Key, Value>::operator=(const Map &other) {
+        if (this != &other) {
+            if (this->sizeOfTree != 0) {
+                this->sizeOfTree = 0;
+                this->tree = other.tree;
+            }
+            sizeOfTree = other.sizeOfTree;
+        }
+        else
+            return *this;
+    }
+
+    template<typename Key, typename Value>
+    Map<Key, Value> &Map<Key, Value>::operator=(Map &&other) noexcept {
     }
 }
 

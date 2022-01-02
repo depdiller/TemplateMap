@@ -26,7 +26,7 @@ namespace TemplateMap {
         Node<Key, Value> *min(Node<Key, Value> *ptrNode);
         Node<Key, Value> *max(Node<Key, Value> *ptrNode);
         Node<Key, Value> *next(Node<Key, Value> *ptrNode);
-        void deleteNode(Node<Key, Value> *ptrNode);
+        void deleteNodeRecursion(Node<Key, Value> *ptrNode);
     };
 
     template<typename Key, typename Value>
@@ -91,10 +91,10 @@ namespace TemplateMap {
     }
 
     template<typename Key, typename Value>
-    void Node<Key, Value>::deleteNode(Node<Key, Value> *ptrNode) {
+    void Node<Key, Value>::deleteNodeRecursion(Node<Key, Value> *ptrNode) {
         if (ptrNode != nullptr) {
-            deleteNode(ptrNode->left);
-            deleteNode(ptrNode->right);
+            deleteNodeRecursion(ptrNode->left);
+            deleteNodeRecursion(ptrNode->right);
             delete ptrNode;
         }
     }

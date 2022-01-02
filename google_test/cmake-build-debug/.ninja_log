@@ -1,15 +1,16 @@
 # ninja log v5
 0	308	1640244059004045393	CMakeFiles/mapTest.dir/Users/stanislavvoronov/CLionProjects/mapTemplate/dialog_test/main.cpp.o	6818838af3be4aac
-2	496	1640251363031813791	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
+1	462	1640253469082061553	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
 0	459	1640244059156971491	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	1b850c6acb07918b
 0	1353	1640244060048280622	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	402a6705bcb486a1
 1353	1384	1640244060083639000	lib/libgtestd.a	49d0bf04b6f1a1e1
 1384	1397	1640244060097390000	lib/libgtest_maind.a	43ca529d8fa44cc5
-496	589	1640251363126674561	mapTest	d9414335fc780a79
-2	55	1640252443441392673	mapTest	d9414335fc780a79
-1	460	1640253024353077361	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
-461	512	1640253024406367489	mapTest	d9414335fc780a79
-1	431	1640253433584964590	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
-431	481	1640253433636970479	mapTest	d9414335fc780a79
-1	462	1640253469082061553	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
 462	512	1640253469133559990	mapTest	d9414335fc780a79
+3	453	1641073612484836576	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
+453	563	1641073612596582099	mapTest	d9414335fc780a79
+2	427	1641121680367564846	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
+427	477	1641121680420025207	mapTest	d9414335fc780a79
+1	444	1641121869873070066	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
+444	493	1641121869923750948	mapTest	d9414335fc780a79
+2	441	1641122449165307363	CMakeFiles/mapTest.dir/googleTestMap.cpp.o	532b43a66360caf
+441	497	1641122449223794448	mapTest	d9414335fc780a79
