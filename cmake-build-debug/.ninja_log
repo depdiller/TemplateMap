@@ -1,9 +1,7 @@
 # ninja log v5
-251	281	1640240941268259182	dialog_test/dialog	fef79b7647c09dce
-1	236	1640252030419969663	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
-21	37	1640240941024772000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
-1	21	1640240941008330691	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
-0	20	1640252361750066957	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
-21	58	1640252361788939000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
-1	288	1640252362017150384	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
-288	317	1640252362047975447	dialog_test/dialog	fef79b7647c09dce
+0	17	1641137897687506174	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
+17	31	1641137897702270000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
+0	235	1641137916313157987	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
+235	262	1641137916341968252	dialog_test/dialog	fef79b7647c09dce
+1	233	1641144046449993702	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
+233	263	1641144046480780490	dialog_test/dialog	fef79b7647c09dce

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "mapTest"
+			"path" : "google_test"
 		}
 	],
 	"backtrace" : 1,
@@ -91,7 +91,7 @@
 			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		}
 	],
-	"id" : "mapTest::@6890427a1f51a3e7e1df",
+	"id" : "google_test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -121,8 +121,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "mapTest",
-	"nameOnDisk" : "mapTest",
+	"name" : "google_test",
+	"nameOnDisk" : "google_test",
 	"paths" : 
 	{
 		"build" : ".",

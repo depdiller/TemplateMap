@@ -20,7 +20,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						4
+						2
 					]
 				},
 				{
@@ -63,7 +63,7 @@
 				{
 					"build" : "_deps/googletest-build/googletest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-2bc7a0b11b0b8c762a1a.json",
+					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-ac36a35564bd63842cf5.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.12"
@@ -73,8 +73,8 @@
 					"source" : "cmake-build-debug/_deps/googletest-src/googletest",
 					"targetIndexes" : 
 					[
-						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -93,7 +93,7 @@
 					"name" : "Google_test",
 					"targetIndexes" : 
 					[
-						4
+						2
 					]
 				},
 				{
@@ -134,8 +134,8 @@
 					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
-						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -156,6 +156,13 @@
 					"projectIndex" : 2
 				},
 				{
+					"directoryIndex" : 0,
+					"id" : "google_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-google_test-Debug-b08ccb5aa1dea0e26c1d.json",
+					"name" : "google_test",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 3,
 					"id" : "gtest::@1ea2dfc0605fe3ab2a3f",
 					"jsonFile" : "target-gtest-Debug-c5dd3ed9eccd61908ec8.json",
@@ -168,13 +175,6 @@
 					"jsonFile" : "target-gtest_main-Debug-cc9396477aa4d1145b01.json",
 					"name" : "gtest_main",
 					"projectIndex" : 3
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "mapTest::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mapTest-Debug-d647ecb0852f2847c8aa.json",
-					"name" : "mapTest",
-					"projectIndex" : 0
 				}
 			]
 		}

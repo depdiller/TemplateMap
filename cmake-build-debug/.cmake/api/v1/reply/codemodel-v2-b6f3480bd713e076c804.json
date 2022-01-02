@@ -14,7 +14,7 @@
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.21"
+						"string" : "3.20"
 					},
 					"projectIndex" : 0,
 					"source" : "."
@@ -24,7 +24,7 @@
 					"jsonFile" : "directory-BinarySearchTree-Debug-53a2bbbd13f4391cd146.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.21"
+						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -39,7 +39,7 @@
 					"jsonFile" : "directory-dialog_test-Debug-ac154727a66e2344be30.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.21"
+						"string" : "3.20"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,

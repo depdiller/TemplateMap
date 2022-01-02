@@ -47,17 +47,20 @@ TEST(MapOperators, AllOperators) {
     map.insert("abc", 3);
     ASSERT_EQ(map["a"], 1);
     std::string s("abcd");
-    std::string s_except("abcde");
     ASSERT_EQ(map[s], 4);
-    EXPECT_ANY_THROW(map[s_except]);
 
     const std::string s_const("abcd");
     ASSERT_EQ(map[s], 4);
     const std::string s_const2("non_exist");
-    EXPECT_ANY_THROW(map[s_const2]);
+    map[s_const2] = 1;
+    ASSERT_EQ(map[s_const2], 1);
 
     map["abcde"] = 8;
     ASSERT_EQ(map["abcde"], 8);
+    map["abcde"] = 9;
+    ASSERT_EQ(map["abcde"], 9);
+    map["abcdef"];
+    ASSERT_EQ(map["abcdef"], 1);
 
     TemplateMap::Map<std::string, int> map1;
     map1["a"] = 1;

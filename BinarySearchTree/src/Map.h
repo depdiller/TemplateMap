@@ -2,7 +2,8 @@
 #define MAPTEMPLATE_MAP_H
 
 #include "BinarySearchTree.h"
-#include "iostream"
+#include <iostream>
+#include <utility>
 
 namespace TemplateMap {
     template<typename Key, typename Value>
@@ -116,12 +117,13 @@ namespace TemplateMap {
     template<typename Key, typename Value>
     Value &Map<Key, Value>::operator[](const Key &key) {
         Map<Key, Value>::iterator tmp1 = tree.search(key);
-        if (tmp1 != end()) {
-            return const_cast<Value &>(tmp1.getCurrentNode()->getValue());
+        if (tmp1 == end()) {
+            Value v;
+            // copying key
+            Map<Key, Value>::iterator tmp2 = insert(key, v);
+            return const_cast<Value &>(tmp2.getCurrentNode()->getValue());
         }
-        else {
-            throw std::invalid_argument("No such key.");
-        }
+        return const_cast<Value &>(tmp1.getCurrentNode()->getValue());
     }
 
     template<typename Key, typename Value>
@@ -129,8 +131,9 @@ namespace TemplateMap {
         Map<Key, Value>::iterator tmp1 = tree.search(key);
         if (tmp1 == end()) {
             Value v;
-            Map<Key, Value>::iterator tmp2 = insert(key, v);
-            return const_cast<Value &>(tmp1.getCurrentNode()->getValue());
+            // moving key
+            Map<Key, Value>::iterator tmp2 = insert(std::move(key), v);
+            return const_cast<Value &>(tmp2.getCurrentNode()->getValue());
         }
         return const_cast<Value &>(tmp1.getCurrentNode()->getValue());
     }

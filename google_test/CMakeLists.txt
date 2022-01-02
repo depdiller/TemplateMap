@@ -17,4 +17,4 @@ find_library(MAP_LIB libmapTemplate.a
 link_libraries(gtest_main ${MAP_LIB})
 include_directories(../BinarySearchTree/src)
 
-add_executable(mapTest googleTestMap.cpp)
+add_executable(google_test googleTestMap.cpp)

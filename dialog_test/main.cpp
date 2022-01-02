@@ -1,11 +1,15 @@
 #include "Map.h"
 #include <string>
 #include <iostream>
-#include <limits>
+#include <climits>
 template<typename T>
 int getNum(T &a);
 
 int main() {
+    TemplateMap::Map<std::string, int> map;
+    const std::string str("hello");
+    map[str] = 1;
+
     int choice;
     TemplateMap::Map<std::string, int> testMap;
     while (true) {
