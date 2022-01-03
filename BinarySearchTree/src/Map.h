@@ -141,11 +141,9 @@ namespace TemplateMap {
     template<typename Key, typename Value>
     Map<Key, Value> &Map<Key, Value>::operator=(const Map &other) {
         if (this != &other) {
-            if (this->sizeOfTree != 0) {
-                this->sizeOfTree = 0;
-                this->tree = other.tree;
-            }
+            this->tree = other.tree;
             sizeOfTree = other.sizeOfTree;
+            return *this;
         }
         else
             return *this;

@@ -59,8 +59,6 @@ TEST(MapOperators, AllOperators) {
     ASSERT_EQ(map["abcde"], 8);
     map["abcde"] = 9;
     ASSERT_EQ(map["abcde"], 9);
-    map["abcdef"];
-    ASSERT_EQ(map["abcdef"], 1);
 
     TemplateMap::Map<std::string, int> map1;
     map1["a"] = 1;
@@ -88,6 +86,19 @@ TEST(Iterator, IteratorOperands) {
     ASSERT_EQ((*it).getValue(), 2);
     ++it;
     ASSERT_EQ(it != it_next, true);
+}
+
+TEST(CopyMap, CopyOperator) {
+    auto *map = new TemplateMap::Map<std::string, int>();
+    (*map)["hello"] = 1;
+    (*map)["world"] = 2;
+    TemplateMap::Map<std::string, int> mapCopy;
+    mapCopy = (*map);
+    ASSERT_EQ(mapCopy["hello"], 1);
+    ASSERT_EQ(mapCopy["world"], 2);
+    delete map;
+    ASSERT_EQ(mapCopy["hello"], 1);
+    ASSERT_EQ(mapCopy["world"], 2);
 }
 
 int main(int argc, char *argv[]) {

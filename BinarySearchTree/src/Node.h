@@ -14,6 +14,7 @@ namespace TemplateMap {
         // constructors
         Node() : parent(nullptr), left(nullptr), right(nullptr) {};
         Node(Key key, Value value, Node *parent);
+        ~Node() = default;;
         // getters
         Key getKey() const { return this->key; }
         const Value &getValue() const { return this->value; }
@@ -26,6 +27,7 @@ namespace TemplateMap {
         Node<Key, Value> *min(Node<Key, Value> *ptrNode);
         Node<Key, Value> *max(Node<Key, Value> *ptrNode);
         Node<Key, Value> *next(Node<Key, Value> *ptrNode);
+        Node<Key, Value> *clone(Node<Key, Value> *node, Node<Key, Value> *parent);
         void deleteNodeRecursion(Node<Key, Value> *ptrNode);
     };
 
@@ -109,6 +111,17 @@ namespace TemplateMap {
             tmp = tmp->parent;
         }
         return tmp;
+    }
+
+    template<typename Key, typename Value>
+    Node<Key, Value> *Node<Key, Value>::clone(Node<Key, Value> *node, Node<Key, Value> *parent) {
+        if (node != nullptr) {
+            Node<Key, Value> *point = new Node(node->getKey(), node->getValue(), parent);
+            point->left = this->clone(node->getLeft(), point);
+            point->right = this->clone(node->getRight(), point);
+            return point;
+        }
+        return nullptr;
     }
 }
 
