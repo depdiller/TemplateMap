@@ -104,7 +104,7 @@ namespace TemplateMap {
 
     template<typename Key, typename Value>
     MapIterator<Key, Value> Map<Key, Value>::insert(Key key, Value value) {
-        if (tree.search(key) == end())
+        if (search(key) == end())
             ++sizeOfTree;
         return iterator(tree.insert(key, value));
     }
