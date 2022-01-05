@@ -154,7 +154,7 @@ ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX1
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include
  /Library/Developer/CommandLineTools/usr/include
  /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/System/Library/Frameworks (framework directory)
-End of search list.
+End of find list.
 [2/2] Linking CXX executable cmTC_561c3
 Apple clang version 13.0.0 (clang-1300.0.29.30)
 Target: arm64-apple-darwin21.2.0
@@ -178,7 +178,7 @@ Parsed CXX implicit include dir info from above output: rv=done
     add: [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include]
     add: [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include]
     add: [/Library/Developer/CommandLineTools/usr/include]
-  end of search list found
+  end of find list found
   collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1]
   collapse include dir [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include] ==> [/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include]
   collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include]

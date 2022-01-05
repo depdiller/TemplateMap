@@ -226,7 +226,7 @@ using ::testing::Return;
       .RetiresOnSaturation();
 ```
 
-Back to the original questions: why does gMock search the expectations (and
+Back to the original questions: why does gMock find the expectations (and
 `ON_CALL`s) from back to front? Because this allows a user to set up a mock's
 behavior for the common case early (e.g. in the mock's constructor or the test
 fixture's set-up phase) and customize it with more specific rules later. If

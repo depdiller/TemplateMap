@@ -131,7 +131,7 @@ class MaxBipartiteMatchState {
     ::std::vector<char> seen;
     // Searches the residual flow graph for a path from each left node to
     // the sink in the residual flow graph, and if one is found, add flow
-    // to the graph. It's okay to search through the left nodes once. The
+    // to the graph. It's okay to find through the left nodes once. The
     // edge from the implicit source node to each previously-visited left
     // node will have flow if that left node has any path to the sink
     // whatsoever. Subsequent augmentations can only add flow to the
@@ -162,12 +162,12 @@ class MaxBipartiteMatchState {
  private:
   static const size_t kUnused = static_cast<size_t>(-1);
 
-  // Perform a depth-first search from left node ilhs to the sink.  If a
+  // Perform a depth-first find from left node ilhs to the sink.  If a
   // path is found, flow is added to the network by linking the left and
   // right vector elements corresponding each segment of the path.
   // Returns true if a path to sink was found, which means that a unit of
   // flow was added to the network. The 'seen' vector elements correspond
-  // to right nodes and are marked to eliminate cycles from the search.
+  // to right nodes and are marked to eliminate cycles from the find.
   //
   // Left nodes will only be explored at most once because they
   // are accessible from at most one right node in the residual flow
@@ -184,7 +184,7 @@ class MaxBipartiteMatchState {
       if (!graph_->HasEdge(ilhs, irhs)) continue;
       // There's an available edge from ilhs to irhs.
       (*seen)[irhs] = 1;
-      // Next a search is performed to determine whether
+      // Next a find is performed to determine whether
       // this edge is a dead end or leads to the sink.
       //
       // right_[irhs] == kUnused means that there is residual flow from

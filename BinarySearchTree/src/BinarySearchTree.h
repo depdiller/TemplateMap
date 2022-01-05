@@ -16,9 +16,11 @@ namespace TemplateMap {
         ~BinarySearchTree();
         // methods
         Node<Key, Value> *insert(Key key, Value value);
-        Node<Key, Value> *search(Key key) const;
+        Node<Key, Value> *find(Key key) const;
         Node<Key, Value> *min() const;
         Node<Key, Value> *max() const;
+        Node<Key, Value> *erase(Node<Key, Value> *toDelete);
+        void transplant(Node<Key, Value>  *what, Node<Key, Value>  *with);
 //        Node<Key, Value> *next(const Key &);
         Value &getValueByKey(Key key) const;
         Node<Key, Value> *getRoot() const { return root; }
@@ -27,7 +29,7 @@ namespace TemplateMap {
     };
 //    template<typename Key, typename Value>
 //    Node<Key, Value> *BinarySearchTree<Key, Value>::next(const Key &key) {
-//        Node<Key, Value> *tmp = search(key);
+//        Node<Key, Value> *tmp = find(key);
 //        return tmp->next(tmp);
 //    }
 
@@ -42,7 +44,7 @@ namespace TemplateMap {
     }
 
     template<typename Key, typename Value>
-    Node<Key, Value> *BinarySearchTree<Key, Value>::search(Key key) const {
+    Node<Key, Value> *BinarySearchTree<Key, Value>::find(Key key) const {
         return root->search(root, key);
     }
 
@@ -73,7 +75,49 @@ namespace TemplateMap {
         else
             return *this;
     }
-}
 
+    template<typename Key, typename Value>
+    void BinarySearchTree<Key, Value>::transplant(Node<Key, Value>  *what, Node<Key, Value>  *with) {
+        if (what->getParent() == nullptr) {
+            this->root = with;
+        } else if (what == what->getParent()->getLeft()) {
+            what->getParent()->setLeft(with);
+        } else {
+            what->getParent()->setRight(with);
+        }
+        if (with != nullptr) {
+            with->setParent(what->getParent());
+        }
+    }
+
+    template<typename Key, typename Value>
+    Node<Key, Value> *BinarySearchTree<Key, Value>::erase(Node<Key, Value> *toDelete) {
+        Node<Key, Value> *nextReturn = nullptr;
+        if (toDelete != nullptr) {
+            if (toDelete->getRight() != nullptr)
+                nextReturn = toDelete->min(toDelete->getRight());
+            else
+                nextReturn = toDelete->getParent();
+
+            if (toDelete->getLeft() == nullptr)
+                transplant(toDelete, toDelete->getRight());
+            else if (toDelete->getRight() == nullptr)
+                transplant(toDelete, toDelete->getLeft());
+            else {
+                Node<Key, Value> *min = toDelete->min(toDelete->getRight());
+                if (min->getParent() != toDelete) {
+                    Node<Key, Value> *min1 = min;
+                    transplant(min, min1->getRight());
+                    min1->setRight(toDelete->getRight());
+                    min1->getRight()->setParent(min);
+                }
+                transplant(toDelete, min);
+                min->setLeft(toDelete->getLeft());
+                min->getLeft()->setParent(min);
+            }
+        }
+        return nextReturn;
+    }
+}
 
 #endif //MAPTEMPLATE_BINARYSEARCHTREE_H

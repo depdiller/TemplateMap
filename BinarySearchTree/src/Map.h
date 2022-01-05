@@ -39,7 +39,8 @@ namespace TemplateMap {
         int size() const { return sizeOfTree; }
         bool isEmpty() const;
         iterator insert(Key key, Value value);
-        iterator search(Key key);
+        iterator find(Key key);
+        iterator erase(iterator toDelete);
 
         Value &operator[](const Key &key);
         Value &operator[](Key &&key);
@@ -104,19 +105,19 @@ namespace TemplateMap {
 
     template<typename Key, typename Value>
     MapIterator<Key, Value> Map<Key, Value>::insert(Key key, Value value) {
-        if (search(key) == end())
+        if (find(key) == end())
             ++sizeOfTree;
         return iterator(tree.insert(key, value));
     }
 
     template<typename Key, typename Value>
-    MapIterator<Key, Value> Map<Key, Value>::search(Key key) {
-        return iterator(tree.search(key));
+    MapIterator<Key, Value> Map<Key, Value>::find(Key key) {
+        return iterator(tree.find(key));
     }
 
     template<typename Key, typename Value>
     Value &Map<Key, Value>::operator[](const Key &key) {
-        Map<Key, Value>::iterator tmp1 = tree.search(key);
+        Map<Key, Value>::iterator tmp1 = tree.find(key);
         if (tmp1 == end()) {
             Value v;
             // copying key
@@ -128,7 +129,7 @@ namespace TemplateMap {
 
     template<typename Key, typename Value>
     Value &Map<Key, Value>::operator[](Key &&key) {
-        Map<Key, Value>::iterator tmp1 = tree.search(key);
+        Map<Key, Value>::iterator tmp1 = tree.find(key);
         if (tmp1 == end()) {
             Value v;
             // moving key
@@ -147,6 +148,13 @@ namespace TemplateMap {
         }
         else
             return *this;
+    }
+
+    template<typename Key, typename Value>
+    MapIterator<Key, Value> Map<Key, Value>::erase(iterator toDelete) {
+        if (toDelete != this->end())
+            --sizeOfTree;
+        return iterator(tree.erase(toDelete.getCurrentNode()));
     }
 
     template<typename Key, typename Value>

@@ -16,8 +16,8 @@ TEST(Methods, MainMethods) {
     map.insert(s2, 2);
     ASSERT_EQ(map.size(), 2);
     ASSERT_EQ(map.isEmpty(), false);
-    ASSERT_EQ(map.search(s1)->getValue(), 1);
-    ASSERT_EQ(map.search("world")->getValue(), 2);
+    ASSERT_EQ(map.find(s1)->getValue(), 1);
+    ASSERT_EQ(map.find("world")->getValue(), 2);
 }
 
 TEST(MapIterator, IteratingThru) {
@@ -99,6 +99,42 @@ TEST(CopyMap, CopyOperator) {
     delete map;
     ASSERT_EQ(mapCopy["hello"], 1);
     ASSERT_EQ(mapCopy["world"], 2);
+}
+
+TEST(HelpMethods, FindAndErase) {
+    TemplateMap::Map<std::string, int> map;
+    map["abcd"] = 4;
+    map["a"] = 1;
+    map["abc"] = 3;
+    map["ab"] = 2;
+
+    int i = 1;
+    for (auto &elm : map) {
+        ASSERT_EQ(elm.getValue(), i);
+        ++i;
+    }
+    ASSERT_NE(map.find("abc"), map.end());
+    ASSERT_NE(map.find("a"), map.end());
+    ASSERT_NE(map.find("abcd"), map.end());
+    ASSERT_NE(map.find("ab"), map.end());
+
+    ASSERT_EQ(map.find("none"), map.end());
+
+    auto itToDel = map.find("a");
+    auto it = map.erase(itToDel);
+    ASSERT_EQ((*it).getValue(), 2);
+    ASSERT_EQ(map.find("a"), map.end());
+    ASSERT_EQ(map.size(), 3);
+    itToDel = map.find("ab");
+    it = map.erase(itToDel);
+    ASSERT_EQ((*it).getValue(), 3);
+    ASSERT_EQ(map.find("ab"), map.end());
+    ASSERT_EQ(map.size(), 2);
+    i = 3;
+    for (auto &elm : map) {
+        ASSERT_EQ(elm.getValue(), i);
+        ++i;
+    }
 }
 
 int main(int argc, char *argv[]) {

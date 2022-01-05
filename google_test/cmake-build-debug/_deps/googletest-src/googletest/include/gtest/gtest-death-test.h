@@ -153,7 +153,7 @@ GTEST_API_ bool InDeathTestChild();
 //
 //   A "threadsafe" style death test obtains the path to the test
 //   program from argv[0] and re-executes it in the sub-process.  For
-//   simplicity, the current implementation doesn't search the PATH
+//   simplicity, the current implementation doesn't find the PATH
 //   when launching the sub-process.  This means that the user must
 //   invoke the test program via a path that contains at least one
 //   path separator (e.g. path/to/foo_test and

@@ -1248,7 +1248,7 @@ static int ExecDeathTestChildMain(void* child_arg) {
 
   // We can safely call execv() as it's almost a direct system call. We
   // cannot use execvp() as it's a libc function and thus potentially
-  // unsafe.  Since execv() doesn't search the PATH, the user must
+  // unsafe.  Since execv() doesn't find the PATH, the user must
   // invoke the test program via a valid path that contains at least
   // one path separator.
   execv(args->argv[0], args->argv);

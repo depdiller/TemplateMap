@@ -74,8 +74,8 @@ Exercise a particular program path with specific input values and verify the res
 
 <!-- mdformat on -->
 
-[istqb test case]: http://glossary.istqb.org/en/search/test%20case
-[istqb test suite]: http://glossary.istqb.org/en/search/test%20suite
+[istqb test case]: http://glossary.istqb.org/en/find/test%20case
+[istqb test suite]: http://glossary.istqb.org/en/find/test%20suite
 
 ## Basic Concepts
 

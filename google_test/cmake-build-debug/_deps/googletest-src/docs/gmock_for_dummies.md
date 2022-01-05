@@ -524,7 +524,7 @@ So far we've only shown examples where you have a single expectation. More
 realistically, you'll specify expectations on multiple mock methods which may be
 from multiple mock objects.
 
-By default, when a mock method is invoked, gMock will search the expectations in
+By default, when a mock method is invoked, gMock will find the expectations in
 the **reverse order** they are defined, and stop when an active expectation that
 matches the arguments is found (you can think of it as "newer rules override
 older ones."). If the matching expectation cannot take any more calls, you will
@@ -543,7 +543,7 @@ error, as the last matching expectation (#2) has been saturated. If, however,
 the third `Forward(10)` call is replaced by `Forward(20)`, then it would be OK,
 as now #1 will be the matching expectation.
 
-**Note:** Why does gMock search for a match in the *reverse* order of the
+**Note:** Why does gMock find for a match in the *reverse* order of the
 expectations? The reason is that this allows a user to set up the default
 expectations in a mock object's constructor or the test fixture's set-up phase
 and then customize the mock by writing more specific expectations in the test

@@ -21,6 +21,10 @@ namespace TemplateMap {
         Node<Key, Value> *getParent() const { return this->parent; }
         Node<Key, Value> *getLeft() const { return this->left; }
         Node<Key, Value> *getRight() const { return this->right; }
+        // setters
+        Node<Key, Value> &setParent(Node<Key, Value> *parent);
+        Node<Key, Value> &setLeft(Node<Key, Value> *left);
+        Node<Key, Value> &setRight(Node<Key, Value> *right);
         // methods for tree
         Node<Key, Value> *insert(Node<Key, Value> *head, Key key, Value value);
         Node<Key, Value> *search(Node<Key, Value> *ptrNode, Key key);
@@ -116,12 +120,30 @@ namespace TemplateMap {
     template<typename Key, typename Value>
     Node<Key, Value> *Node<Key, Value>::clone(Node<Key, Value> *node, Node<Key, Value> *parent) {
         if (node != nullptr) {
-            Node<Key, Value> *point = new Node(node->getKey(), node->getValue(), parent);
+            auto *point = new Node(node->getKey(), node->getValue(), parent);
             point->left = this->clone(node->getLeft(), point);
             point->right = this->clone(node->getRight(), point);
             return point;
         }
         return nullptr;
+    }
+
+    template<typename Key, typename Value>
+    Node<Key, Value> &Node<Key, Value>::setParent(Node<Key, Value> *parent) {
+        this->parent = parent;
+        return *this;
+    }
+
+    template<typename Key, typename Value>
+    Node<Key, Value> &Node<Key, Value>::setLeft(Node<Key, Value> *left) {
+        this->left = left;
+        return *this;
+    }
+
+    template<typename Key, typename Value>
+    Node<Key, Value> &Node<Key, Value>::setRight(Node<Key, Value> *right) {
+        this->right = right;
+        return *this;
     }
 }
 

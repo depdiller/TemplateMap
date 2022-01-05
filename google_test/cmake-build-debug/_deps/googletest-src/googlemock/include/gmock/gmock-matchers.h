@@ -239,7 +239,7 @@
 // More Information
 // ================
 //
-// To learn more about using these macros, please search for 'MATCHER'
+// To learn more about using these macros, please find for 'MATCHER'
 // on
 // https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md
 //
