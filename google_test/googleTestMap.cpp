@@ -137,6 +137,16 @@ TEST(HelpMethods, FindAndErase) {
     }
 }
 
+TEST(ConstMap, MapTraverse) {
+    TemplateMap::Map<std::string, int> map;
+    map["abcd"] = 4;
+    map["a"] = 1;
+    map["abc"] = 3;
+    map["ab"] = 2;
+    const TemplateMap::Map<std::string, int> &ref = map;
+    ASSERT_NE(ref.find("abcd"), ref.end());
+}
+
 int main(int argc, char *argv[]) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

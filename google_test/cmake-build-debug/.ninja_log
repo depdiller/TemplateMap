@@ -1,19 +1,11 @@
 # ninja log v5
-0	446	1641199625084395393	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	1b850c6acb07918b
-0	1338	1641199625974995042	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	402a6705bcb486a1
-1	31	1641199753055443000	lib/libgtestd.a	49d0bf04b6f1a1e1
-440	489	1641204081270930368	google_test	4d9ffeabf4194aff
-32	49	1641199753073572000	lib/libgtest_maind.a	43ca529d8fa44cc5
-2	439	1641204081219399253	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
 1	591	1641384375417914180	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	1b850c6acb07918b
 1	1794	1641384376618756056	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	402a6705bcb486a1
 1	29	1641384430285894000	lib/libgtestd.a	49d0bf04b6f1a1e1
+468	527	1641477327165643953	google_test	4d9ffeabf4194aff
 29	45	1641384430301832000	lib/libgtest_maind.a	43ca529d8fa44cc5
-1	450	1641384780592308515	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
-450	515	1641384780659214086	google_test	4d9ffeabf4194aff
-1	451	1641384915864959192	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
-451	504	1641384915919200255	google_test	4d9ffeabf4194aff
-2	488	1641385751259625664	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
-488	539	1641385751312473081	google_test	4d9ffeabf4194aff
-2	465	1641386693001454432	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
-466	516	1641386693053054228	google_test	4d9ffeabf4194aff
+3	467	1641477327102266374	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
+2	697	1641479957472479847	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
+698	792	1641479957569038572	google_test	4d9ffeabf4194aff
+1	588	1641480051689381333	CMakeFiles/google_test.dir/googleTestMap.cpp.o	f42c20fc7e7df31a
+588	677	1641480051777502909	google_test	4d9ffeabf4194aff

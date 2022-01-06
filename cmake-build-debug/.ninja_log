@@ -1,8 +1,5 @@
 # ninja log v5
-1	20	1641199190405755998	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
-20	38	1641199190424665000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
+0	17	1641477342874471698	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
+17	32	1641477342890254000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
 2	255	1641199190640934112	dialog_test/CMakeFiles/dialog.dir/main.cpp.o	4d750bb67a2b7665
 255	293	1641199190679897233	dialog_test/dialog	fef79b7647c09dce
-0	25	1641384319921151675	BinarySearchTree/CMakeFiles/mapTemplate.dir/src/BinarySearchTree.cpp.o	f281a2310d8d386
-25	42	1641384319939096000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
-0	15	1641384359239618000	BinarySearchTree/libmapTemplate.a	d884558ebc38038a
