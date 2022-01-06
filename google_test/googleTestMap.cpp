@@ -145,6 +145,11 @@ TEST(ConstMap, MapTraverse) {
     map["ab"] = 2;
     const TemplateMap::Map<std::string, int> &ref = map;
     ASSERT_NE(ref.find("abcd"), ref.end());
+    int i = 1;
+    for (auto const &el : map) {
+        ASSERT_EQ(el.getValue(), i);
+        ++i;
+    }
 }
 
 int main(int argc, char *argv[]) {

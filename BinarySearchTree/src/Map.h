@@ -34,8 +34,8 @@ namespace TemplateMap {
         const Node<Key, Value> &operator*();
         const Node<Key, Value> *operator->();
         const Node<Key, Value> *getCurrentNode() const { return currentNode; }
-//        ConstMapIterator<Key, Value> &operator++();
-//        ConstMapIterator<Key, Value> operator++(int);
+        ConstMapIterator<Key, Value> &operator++();
+        ConstMapIterator<Key, Value> operator++(int);
     };
 
     template<typename Key, typename Value>
@@ -62,18 +62,18 @@ namespace TemplateMap {
         return currentNode;
     }
 
-//    template<typename Key, typename Value>
-//    ConstMapIterator<Key, Value> &ConstMapIterator<Key, Value>::operator++() {
-//        currentNode = currentNode->next(currentNode);
-//        return *this;
-//    }
+    template<typename Key, typename Value>
+    ConstMapIterator<Key, Value> &ConstMapIterator<Key, Value>::operator++() {
+        currentNode = currentNode->next(currentNode);
+        return *this;
+    }
 
-//    template<typename Key, typename Value>
-//    ConstMapIterator<Key, Value> ConstMapIterator<Key, Value>::operator++(int) {
-//        ConstMapIterator<Key, Value> res(*this);
-//        currentNode = currentNode->next(currentNode);
-//        return res;
-//    }
+    template<typename Key, typename Value>
+    ConstMapIterator<Key, Value> ConstMapIterator<Key, Value>::operator++(int) {
+        ConstMapIterator<Key, Value> res(*this);
+        currentNode = currentNode->next(currentNode);
+        return res;
+    }
 
 
     template<typename Key, typename Value>
